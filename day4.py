@@ -14,10 +14,7 @@ retail_price = [12.99, 8.99, 9.99, 3.99]
 """
 Fei's Solution
 """
+
 for i in range(0, len(item_list)):
-    retail_total = 0
-    for j in range(0, amount_list[i]):
-        retail_total += retail_price[i]
-    print(item_list[i], "\twholesale?",
-          "yes" if wholesale_price_list[i] < retail_total else "no",
-          "\t", wholesale_price_list[i], "\t", retail_total)
+    retail_total = amount_list[i] * retail_price[i]
+    print(item_list[i], retail_total, wholesale_price_list[i])
