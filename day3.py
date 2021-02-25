@@ -1,9 +1,12 @@
 """
 Challenge
+
 Dot has some specific rules for what they want to change in the shopping list: 
 
 1. They hate oak wood, and prefer maple.
 2. They want to paint all the rooms blue except the kitchen, which they want to paint white. 
+
+Create a paint_list list from the new_shopping_list list using the built in python list indexing ability.
 """
 
 old_blueprint = {
@@ -17,7 +20,6 @@ old_blueprint = {
 
 shopping_list = ['20 x Oak Plank', '20 x Oak Plank',
                  '20 x Cherry Plank', 'White Paint', 'White Paint', 'White Paint']
-
 
 new_shopping_list = shopping_list.copy()
 new_shopping_list[3:]

@@ -10,7 +10,6 @@ Challenge
 1. What is the average sized hole?
 2. What is the average cost to fix a hole?
 3. What is the total cost of fixing all of the holes?
-
 """
 
 import pandas as pd 
@@ -20,12 +19,8 @@ random.seed(34)
 hole_sizes = [random.randint(1, i) for i in range(1, 101)]
 random.shuffle(hole_sizes)
 
-"""
-Fei's Solution
-"""
-
 series = pd.Series(hole_sizes)
-print(series.mean())  # Average sized hole
+print(series.mean())  # 1.
 print(series.max())  # Maximum sized hole
 print(series.min())  # Minimum sized hole
 
@@ -38,5 +33,5 @@ def map_price(i):
         return 2.1
 
 prices = series.map(map_price)
-print(prices.mean())  # Average price
-print(prices.sum()) # Total price
+print(prices.mean())  # 2.
+print(prices.sum()) # 3.

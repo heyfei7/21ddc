@@ -22,9 +22,6 @@ country_price = [5.49, 4.69, 4.42, 5.99, 5.99, 2.50,
                  1.25, 2.49, 4.50, 6.75, 2.49, 1.99,
                  6.25, 3.99, 3.59, 4.99, 1.69, 1.87, 10.99]
 
-"""
-Fei's Solution
-"""
 for i in range(len(cleaningsupplies_list)):
     nearby = country_price[i]
     faraway = city_price[i]

@@ -13,7 +13,6 @@ Dot has a lot of different boxes laying around. They need a system for how to un
 Create a function that will open the boxes according to their weight, from lightest to heaviest.
 """
 
-# example dicitonary
 user_boxes = {'weight': [4, 2, 18, 21, 14, 13],
               'box_name': ['box1', 'box2', 'box3', 'box4', 'box5', 'box6']
               }

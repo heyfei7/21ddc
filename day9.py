@@ -9,21 +9,16 @@ After filling in the missing values with our new data, answer these questions fo
 3. What is the average number of cows used?
 """
 
-
-"""
-Fei's Solution
-"""
-
 import pandas as pd
 from math import sqrt
-df = pd.read_csv('21ddc/data/milk_2.csv')
+df = pd.read_csv('data/milk_2.csv')
 
 ppcName = 'Monthly milk production: pounds per cow'
 ppc = df[ppcName].map(float)
 ppc = ppc.fillna(ppc.median())
-print(ppc.mean())
-print(ppc.std())
+print(ppc.mean()) # 1.
+print(ppc.std()) # 2.
 
 nocName = 'Number of Cows'
 noc = df[nocName].map(float).fillna(method='ffill')
-print(noc.mean())
+print(noc.mean()) # 3.

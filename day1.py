@@ -1,5 +1,6 @@
 """
 Challenge
+
 Modify the lease agreement with your signature without changing the original lease variable.
 """
 
@@ -11,13 +12,6 @@ lease = '''Dear Dot,
             Please Sign Here: 
 '''
 
-"""
-Fei's Solution
-"""
-
-"""
-21DDC Solution
-"""
 signature = "Dot"
 
 new_lease = f'''
