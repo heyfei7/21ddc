@@ -10,5 +10,12 @@ import pandas as pd
 
 df = pd.read_csv('data/avocado.csv', index_col=0)
 df = df[df['AveragePrice'] >= 2]
-df_perYear = df.groupby(['year', 'type']).mean()
-print(df_perYear)
+df_perYear = df.groupby(['year', 'type']) #.mean()
+
+yearToTypes = dict()
+for name, _ in df_perYear:
+    year, yearType = name
+    yearToTypes.setdefault(year, [])
+    yearToTypes[year].append(yearType)
+    if len(yearToTypes[year]) == 2:
+        print(year)

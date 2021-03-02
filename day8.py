@@ -15,10 +15,10 @@ cmp_col = 'Monthly milk production: pounds per cow'
 df = pd.read_csv('data/milk.csv')
 idxmax = df[cmp_col].idxmax()
 idxmin = df[cmp_col].idxmin()
-print(df.iloc[idxmax]['Month']) # 1.
-print(df.iloc[idxmin]['Month']) # 2.
+print("1.", df.iloc[idxmax]['Month'])
+print("2.", df.iloc[idxmin]['Month'])
 
 df = df.assign(Year=lambda x: x['Month'].map(lambda y: y[:2]))
 df_perYear = df.groupby(['Year'], as_index=False).sum()
 idxmax = df_perYear[cmp_col].idxmax()
-print(df_perYear.iloc[idxmax]['Year']) # 3.
+print("3.", df_perYear.iloc[idxmax]['Year'])

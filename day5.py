@@ -26,4 +26,4 @@ for i in range(len(cleaningsupplies_list)):
     nearby = country_price[i]
     faraway = city_price[i]
     if nearby > faraway * 1.1:
-        print(cleaningsupplies_list[i], nearby, faraway)
+        print(cleaningsupplies_list[i])

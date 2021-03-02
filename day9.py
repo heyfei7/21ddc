@@ -11,14 +11,21 @@ After filling in the missing values with our new data, answer these questions fo
 
 import pandas as pd
 from math import sqrt
+from formatter import decimal
+
 df = pd.read_csv('data/milk_2.csv')
 
 ppcName = 'Monthly milk production: pounds per cow'
 ppc = df[ppcName].map(float)
 ppc = ppc.fillna(ppc.median())
-print(ppc.mean()) # 1.
-print(ppc.std()) # 2.
+a1 = ppc.mean()
+a2 = ppc.std()
+
 
 nocName = 'Number of Cows'
 noc = df[nocName].map(float).fillna(method='ffill')
-print(noc.mean()) # 3.
+a3 = noc.mean()
+
+print("Q1:", decimal(a1, 4))
+print("Q2:", decimal(a2, 4))
+print("Q3:", decimal(a3, 4))

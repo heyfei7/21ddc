@@ -9,8 +9,11 @@ Note: Use the index positions of the wines as the wine names.
 
 import pandas as pd
 wine_df = pd.read_csv('data/winequality-red.csv', index_col=0)
-q1 = (wine_df['quality'] >= 8) & (wine_df['residual sugar'] > 5)
-q2 = ((wine_df['quality'] == 8) | (wine_df['quality'] == 7)) & (
+f1 = (wine_df['quality'] >= 8) & (wine_df['residual sugar'] > 5)
+wines = ["Wine " + str(i) for i in wine_df[f1].index]
+print("Q1:", " & ".join(wines))
+
+f2 = ((wine_df['quality'] == 8) | (wine_df['quality'] == 7)) & (
     wine_df['citric acid'] < 0.4)
-print(wine_df[q1])  # 1.
-print(wine_df[q2].info())  # 2.
+a2 = len(wine_df[f2].index)
+print("Q2:", a2, "Wines")
