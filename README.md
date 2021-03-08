@@ -5,3 +5,4 @@ Solutions for the [21 Days of Data Challenge](https://data-challenge.lighthousel
 Stack:
 - `python3`
 - `pandas` library
+- `matplotlib.pyplot` library
